@@ -17,6 +17,11 @@ jobs:
         uses: actions/checkout@v3.3.0
 
       - name: run my action
+        id: run-action
         uses: ./HiTeam
         with:
           who-to-greet: "${{ github.event.inputs.victim }} "
+
+      - name: Print Output
+        id: output
+        run: echo "${{ steps.run-action.outputs.greeting }}"
