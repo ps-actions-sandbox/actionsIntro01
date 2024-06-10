@@ -2,7 +2,7 @@ name: CI build for docker action
 on:
   push:
     branches: [main,housten-dryrun]
-    paths: [HiTeam]
+    paths: [HiTeam/**]
   workflow_dispatch:
 
 jobs:
