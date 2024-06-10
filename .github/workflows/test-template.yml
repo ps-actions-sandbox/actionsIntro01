@@ -8,6 +8,7 @@ on:
       logLevel:
         description: "Level to log at"
         type: choice
+        default: info
         options:
           - info
           - warning
