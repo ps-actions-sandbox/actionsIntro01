@@ -3,6 +3,7 @@ name: Test workflow template
 on:
   push:
     branches: [ "main","housten-dryrun" ]
+    paths-ignore: [HiTeam/**]
   workflow_dispatch:
     inputs:
       logLevel:
