@@ -1,9 +1,13 @@
-name: CI build for docker action
+name: docker action demo
 on:
   push:
     branches: [main,housten-dryrun]
     paths: [HiTeam/**]
   workflow_dispatch:
+    inputs:
+      victim:
+        default: "you"
+      
 
 jobs:
   container-run:
@@ -15,4 +19,4 @@ jobs:
       - name: run my action
         uses: ./HiTeam
         with:
-          who-to-greet: "you"
+          who-to-greet: "${{ github.event.inputs.victim }} "
