@@ -2,7 +2,7 @@ name: Test workflow template
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main","housten-dryrun" ]
   workflow_dispatch:
     inputs:
       logLevel:
