@@ -1,0 +1,25 @@
+name: Test workflow template
+
+on:
+  push:
+    branches: [ "main","housten-dryrun" ]
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: "Level to log at"
+        type: choice
+        default: info
+        options:
+          - info
+          - warning
+          - debug
+      
+
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run a one-line script
+        run: echo "Hello this is a workflow template running log level `${{ github.event.inputs.logLevel }}`"
+      
