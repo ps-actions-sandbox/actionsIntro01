@@ -1,7 +1,7 @@
 name: CI build for docker action
 on:
   push:
-    branches: [main]
+    branches: [main,housten-dryrun]
     paths: [HiTeam]
   workflow_dispatch:
 
